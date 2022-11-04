@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janken</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/janken.css">
+</head>
+<body>
+    <div class="wrapper">
+
+        <!-- じゃんけん表示 JavaScriptで表示/非表示を切り替え -->
+
+            <h1 class="title js-prefecture"></h1>
+            <h1 class="title js-janken">じゃんけん</h1>
+        
+            <div class="player">
+
+                <div class="you js-player">あなた</div>
+                <div class="btn js-player js-gu" onclick="judge();gu()" value="1">グー！</div>
+                <div class="btn js-player js-choki" onclick="judge();choki()" value="0">チョキ！</div>
+                <div class="btn js-player js-pa" onclick="judge();pa()" value="-1">パー！</div>
+                
+            </div>
+
+            <div class="js-opponent opponent">あいて</div>
+
+        <!-- 相手の出し手と結果の表示 -->
+            <div class="result">
+                <h1 class="js-kekka kekka"></h1>
+                <div class="img__anko"><img class="kekka__img" src="img/anko.jpeg" alt=""></div>
+                <div class="img__camp"><img class="kekka__img" src="img/campchi.jpeg" alt=""></div>
+                <div class="img__charisma"><img class="kekka__img" src="img/charisma.jpeg" alt=""></div>
+            </div>
+    </div>
+    
+    <!-- 効果音のソース -->
+    <audio class="js-don"><source src="music/don.mp3"></audio>
+    <audio class="js-kaka"><source src="music/kaka.mp3"></audio>
+    <audio class="js-dodon"><source src="music/dodon.mp3"></audio>
+    
+    <!-- JavaScriptでじゃんけんを実行 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="js/janken.js"></script>
+
+</body>
+</html>

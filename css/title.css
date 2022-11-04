@@ -1,0 +1,42 @@
+@charset "UTF-8";
+@font-face {
+	font-family: 'MyFont';
+	src: url(font/g_brushtappitsu_free_012/g_brushtappitsu_freeB.ttf);
+}
+body {
+	font-family: MyFont;
+    background: color #fff;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.title {
+    height: auto;
+    font-size: 12rem;
+    font-weight: bolder;
+    color: #f00;
+
+    text-align: center;
+    writing-mode: vertical-rl;
+    display: flex;
+    margin: auto;
+    padding: 10%;
+}
+.title .big {
+    font-size: 21rem;
+}
+.title .small{
+    padding-right: 40px;
+    font-size: 5rem;
+    font-weight: normal;
+    color: #333;
+}
+.title__link {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+}
+.go_to_map {
+    font-size: 20px;
+}
