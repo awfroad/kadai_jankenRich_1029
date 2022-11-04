@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/mapstyle.css">
+    <link rel="stylesheet" href="css/map.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div id="jp_map" class="jp_map">
+            <ul class="tohoku" aria-label="北海道">
+            <li class="hokkaido"><a id="pref_hokkaido" class="pref_select"><span class="pref_name">ほっかいどう</span></a></li>
+            </ul>
+            <ul class="tohoku" aria-label="東北">
+            <li class="aomori"><a id="pref_aomori" class="pref_select"><span class="pref_name">あおもり</span></a></li>
+            <li class="akita"><a id="pref_akita" class="pref_select"><span class="pref_name">あきた</span></a></li>
+            <li class="iwate"><a id="pref_iwate" class="pref_select"><span class="pref_name">いわて</span></a></li>
+            <li class="yamagata"><a id="pref_yamagata" class="pref_select"><span class="pref_name">やまがた</span></a></li>
+            <li class="miyagi"><a id="pref_miyagi" class="pref_select"><span class="pref_name">みやぎ</span></a></li>
+            <li class="fukushima"><a id="pref_fukushima" class="pref_select"><span class="pref_name">ふくしま</span></a></li>
+            </ul>
+            <ul class="kanto" aria-label="関東">
+            <li class="gunma"><a id="pref_gunma" class="pref_select"><span class="pref_name">ぐんま</span></a></li>
+            <li class="tochigi"><a id="pref_tochigi" class="pref_select"><span class="pref_name">とちぎ</span></a></li>
+            <li class="ibaraki"><a id="pref_ibaraki" class="pref_select"><span class="pref_name">いばらき</span></a></li>
+            <li class="saitama"><a id="pref_saitama" class="pref_select"><span class="pref_name">さいたま</span></a></li>
+            <li class="chiba"><a id="pref_chiba" class="pref_select"><span class="pref_name">ちば</span></a></li>
+            <li class="tokyo"><a id="pref_tokyo" class="pref_select"><span class="pref_name">とうきょう</span></a></li>
+            <li class="kanagawa"><a id="pref_kanagawa" class="pref_select"><span class="pref_name">かながわ</span></a></li>
+            </ul>
+            <ul class="chubu" aria-label="中部">
+            <li class="nigata"><a id="pref_nigata" class="pref_select"><span class="pref_name">にいがた</span></a></li>
+            <li class="toyama"><a id="pref_toyama" class="pref_select"><span class="pref_name">とやま</span></a></li>
+            <li class="ishikawa"><a id="pref_ishikawa" class="pref_select"><span class="pref_name">いしかわ</span></a></li>
+            <li class="fukui"><a id="pref_fukui" class="pref_select"><span class="pref_name">ふくい</span></a></li>
+            <li class="nagano"><a id="pref_nagano" class="pref_select"><span class="pref_name">ながの</span></a></li>
+            <li class="gifu"><a id="pref_gifu" class="pref_select"><span class="pref_name">ぎふ</span></a></li>
+            <li class="yamanashi"><a id="pref_yamanashi" class="pref_select"><span class="pref_name">やまなし</span></a></li>
+            <li class="aichi"><a id="pref_aichi" class="pref_select"><span class="pref_name">あいち</span></a></li>
+            <li class="shizuoka"><a id="pref_shizuoka" class="pref_select"><span class="pref_name">しずおか</span></a></li>
+            </ul>
+            <ul class="kansai" aria-label="近畿">
+            <li class="kyoto"><a id="pref_kyoto" class="pref_select"><span class="pref_name">きょうと</span></a></li>
+            <li class="shiga"><a id="pref_shiga" class="pref_select"><span class="pref_name">しが</span></a></li>
+            <li class="osaka"><a id="pref_osaka" class="pref_select"><span class="pref_name">おおさか</span></a></li>
+            <li class="nara"><a id="pref_nara" class="pref_select"><span class="pref_name">なら</span></a></li>
+            <li class="mie"><a id="pref_mie" class="pref_select"><span class="pref_name">みえ</span></a></li>
+            <li class="wakayama"><a id="pref_wakayama" class="pref_select"><span class="pref_name">わかやま</span></a></li>
+            <li class="hyogo"><a id="pref_hyougo" class="pref_select"><span class="pref_name">ひょうご</span></a></li>
+            </ul>
+            <ul class="chugoku" aria-label="中国">
+            <li class="tottori"><a id="pref_tottori" class="pref_select"><span class="pref_name">とっとり</span></a></li>
+            <li class="okayama"><a id="pref_okayama" class="pref_select"><span class="pref_name">おかやま</span></a></li>
+            <li class="shimane"><a id="pref_shimane" class="pref_select"><span class="pref_name">しまね</span></a></li>
+            <li class="hiroshima"><a id="pref_hiroshima" class="pref_select"><span class="pref_name">ひろしま</span></a></li>
+            <li class="yamaguchi"><a id="pref_yamaguchi" class="pref_select"><span class="pref_name">やまぐち</span></a></li>
+            </ul>
+            <ul class="shikoku" aria-label="四国">
+            <li class="kagawa"><a id="pref_kagawa" class="pref_select"><span class="pref_name">かがわ</span></a></li>
+            <li class="ehime"><a id="pref_ehime" class="pref_select"><span class="pref_name">えひめ</span></a></li>
+            <li class="tokushima"><a id="pref_tokushima" class="pref_select"><span class="pref_name">とくしま</span></a></li>
+            <li class="kochi"><a id="pref_kouchi" class="pref_select"><span class="pref_name">こうち</span></a></li>
+            </ul>
+            <ul class="kyushu" aria-label="九州">
+            <li class="fukuoka"><a id="pref_fukuoka" class="pref_select"><span class="pref_name">ふくおか</span></a></li>
+            <li class="saga"><a id="pref_saga" class="pref_select"><span class="pref_name">さが</span></a></li>
+            <li class="nagasaki"><a id="pref_nagasaki" class="pref_select"><span class="pref_name">ながさき</span></a></li>
+            <li class="oita"><a id="pref_oita" class="pref_select"><span class="pref_name">おおいた</span></a></li>
+            <li class="kumamoto"><a id="pref_kumamoto" class="pref_select"><span class="pref_name">くまもと</span></a></li>
+            <li class="miyazaki"><a id="pref_miyazaki" class="pref_select"><span class="pref_name">みやざき</span></a></li>
+            <li class="kagoshima"><a id="pref_kagoshima" class="pref_select"><span class="pref_name">かごしま</span></a></li>
+            </ul>
+            <ul class="okinawa" aria-label="沖縄">
+            <li class="okinawa"><a id="pref_okinawa" class="pref_select"><span class="pref_name">おきなわ</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="score">
+        <table width="150px">
+            <tr>
+                <th>あなた</th>
+                <th class="score_you"></th>
+            </tr>
+            <tr>
+                <th>あいて</th>
+                <th class="score_oppo"></th>
+            </tr>
+            <tr>
+                <th>のこり</th>
+                <th class="score_nokori"></th>
+            </tr>
+        </table>
+    </div>
+    <a class="modoru" href="index.html" onclick="modoru()">もどる</a>
+    
+    <audio class="thema" controls autoplay src="music/thema.m4a"></audio>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="js/janken.js"></script>
+    <script>
+        
+        let jankenTimes = Number(localStorage.getItem('jankenTimes'));
+        let prefectureid = localStorage.getItem('prefectureid');
+        
+        $('.pref_select').on('click',function(){
+            localStorage.setItem('prefectureName', $(this).text());
+            localStorage.setItem('prefectureid', $(this).attr('id'));
+            
+            jankenTimes += 1;
+            localStorage.setItem('jankenTimes', jankenTimes );
+            // localStorage.setItem('prefectureid', $(this).sttr('id'));
+            // console.log(prefectureid);
+            // $('#' + prefectureid).css('background-color','#000');
+            window.location.href = "janken.html"
+        });
+        
+        console.log(jankenTimes);
+        console.log(prefectureid);
+        
+        let yourscore2 = Number(localStorage.getItem('yourscore1'));
+        let opponentscore2 = Number(localStorage.getItem('opponentscore1'));
+        localStorage.setItem('yourscore2', yourscore2 );
+        localStorage.setItem('opponentscore2', opponentscore2 );
+        
+        console.log(yourscore2);
+        console.log(opponentscore2);
+
+        $('.score_you').html(yourscore2);
+        $('.score_oppo').html(opponentscore2);
+        $('.score_nokori').html(47-yourscore2-opponentscore2);
+        
+    </script>
+
+</body>
+</html>
